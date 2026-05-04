@@ -848,7 +848,7 @@ export default function FarazmHoldings() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 mb-10">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <img src="/src/assets/image.png" alt="FARAZM Logo" className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
+              <img src={farazmLogo} alt="FARAZM Logo" className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
               <div>
                 <div className="font-serif font-bold text-lg text-white">FARAZM HOLDINGS</div>
                 <div className="text-xs tracking-[0.25em] uppercase text-gold">Kingdom of Saudi Arabia</div>
