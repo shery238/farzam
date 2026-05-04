@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import logo1 from './assets/logo1.png'
+import logo2 from './assets/logo2.png'
+import logo3svg from './assets/logo3.svg'
+import farazmLogo from './assets/image.png'
 
 const C = {
   obsidian: "#07070C", onyx: "#0F0F1A", charcoal: "#161625",
@@ -243,13 +247,12 @@ const TALENT_POOL = [
 ];
 
 const CONTRACTING_CLIENTS = [
-  { name: "Al Ayuni Investment & Contracting", abbr: "AI", logo: "/src/assets/logo1.png", bg: "#1a1a0e", accent: C.gold, sector: "Construction & Infrastructure", desc: "A major Saudi construction firm founded in the 1960s, known as a first-class contractor in infrastructure projects. It works across roads, railways, buildings, water, and energy sectors with large-scale national projects.", projects: "12+ joint projects", value: "SAR 180M+" },
-  { name: "Saudi Binladin Group", abbr: "SBG", logo: "https://www.sbgom.com/wp-content/uploads/2019/05/SBGOM-Logo.png", logoBg: "#1a0e0e", bg: "#1a0e0e", accent: "#FF6B6B", sector: "Mega Construction", desc: "One of the largest construction conglomerates in the Middle East, founded in 1931. It has delivered landmark projects like the Grand Mosque expansions and major infrastructure developments across Saudi Arabia and internationally.", projects: "8+ joint projects", value: "SAR 240M+" },
-  { name: "Saudi Oger Ltd", abbr: "SO", logo: "/src/assets/logo2.png", bg: "#0e1a1a", accent: "#7B9BFF", sector: "Construction & Real Estate", desc: "A major Saudi construction company established in 1978 and once owned by the Hariri family. It handled large government and infrastructure projects but ceased operations around 2017–2018 after financial difficulties.", projects: "15+ joint projects", value: "SAR 320M+" },
-  { name: "Saudi German Hospital", abbr: "SGH", logo: "/src/assets/logo3.svg", bg: "#0e1a0e", accent: C.greenLt, sector: "Healthcare Infrastructure", desc: "A leading private healthcare network in the Middle East and North Africa, founded in 1988. It operates multiple hospitals and clinics, offering advanced medical services with international standards across several countries.", projects: "6+ joint projects", value: "SAR 45M+" },
-  { name: "MASCO General Contracting", abbr: "MGC", logo: "https://www.masco.com.sa/wp-content/uploads/2022/06/logo-2.png", bg: "#1a0e1a", accent: C.gold, sector: "General Contracting", desc: "A large Saudi infrastructure and construction company founded in 1968. It specializes in roads, railways, water, and energy projects, including major national developments like the Haramain high-speed railway.", projects: "20+ joint projects", value: "SAR 95M+" },
+  { name: "Al Ayuni Investment & Contracting", abbr: "AI", logo: logo1, bg: "#1a1a0e", accent: C.gold, sector: "Construction & Infrastructure", desc: "A major Saudi construction firm founded in the 1960s...", projects: "12+ joint projects", value: "SAR 180M+" },
+  { name: "Saudi Binladin Group", abbr: "SBG", logo: "https://www.sbgom.com/wp-content/uploads/2019/05/SBGOM-Logo.png", bg: "#1a0e0e", accent: "#FF6B6B", sector: "Mega Construction", desc: "One of the largest construction conglomerates...", projects: "8+ joint projects", value: "SAR 240M+" },
+  { name: "Saudi Oger Ltd", abbr: "SO", logo: logo2, bg: "#0e1a1a", accent: "#7B9BFF", sector: "Construction & Real Estate", desc: "A major Saudi construction company...", projects: "15+ joint projects", value: "SAR 320M+" },
+  { name: "Saudi German Hospital", abbr: "SGH", logo: logo3svg, bg: "#0e1a0e", accent: C.greenLt, sector: "Healthcare Infrastructure", desc: "A leading private healthcare network...", projects: "6+ joint projects", value: "SAR 45M+" },
+  { name: "MASCO General Contracting", abbr: "MGC", logo: "https://www.masco.com.sa/wp-content/uploads/2022/06/logo-2.png", bg: "#1a0e1a", accent: C.gold, sector: "General Contracting", desc: "A large Saudi infrastructure company...", projects: "20+ joint projects", value: "SAR 95M+" },
 ];
-
 export default function FarazmHoldings() {
   const [navScrolled, setNavScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -309,7 +312,7 @@ export default function FarazmHoldings() {
       {/* ── NAVBAR ── */}
       <nav className={`fixed top-6 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-[72px] transition-all duration-300 ${navScrolled ? "bg-obsidian/95 backdrop-blur-xl border-b border-border !top-0 h-16" : ""}`}>
         <a className="flex items-center gap-3 cursor-pointer no-underline" onClick={() => scrollTo("hero")}>
-          <img src="/src/assets/image.png" alt="FARAZM Logo" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+          <img src={farazmLogo} alt="FARAZM Logo" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
           <div>
             <div className="font-serif font-bold text-lg text-white tracking-wider leading-tight">FARAZM</div>
             <div className="text-xs tracking-[0.25em] uppercase text-gold leading-tight">HOLDINGS · KSA</div>
