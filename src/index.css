@@ -178,11 +178,10 @@
   font-family: var(--font-serif);
   font-size: 4rem;
   font-weight: 700;
-  opacity: 0.06;
-  color: var(--color-gold);
+  opacity: 0.9;
+  color: rgba(245, 240, 232, 0.9);  /* ← WHITE */
   line-height: 1;
 }
-
 .stat-num {
   font-family: var(--font-serif);
   font-size: 3rem;

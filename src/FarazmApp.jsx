@@ -58,10 +58,10 @@ const SectionHeader = ({ overline, title, highlight, desc }) => (
 );
 
 const SECTORS = [
-  { id: "agriculture", label: "🌾 Agriculture" },
-  { id: "manufacturing", label: "🏭 Manufacturing" },
-  { id: "services", label: "⚙️ Services" },
-  { id: "technology", label: "💻 Technology" },
+  { id: "agriculture", label: "✦ Agriculture" },
+  { id: "manufacturing", label: "✦ Manufacturing" },
+  { id: "services", label: "✦ Services" },
+  { id: "technology", label: "✦ Technology" },
 ];
 
 const AgricultureContent = () => (
@@ -75,13 +75,13 @@ const AgricultureContent = () => (
       </div>
       <div className="grid grid-cols-2 gap-4">
         {[
-          { num: "500K+", label: "sqm Farm Area", icon: "🌿" },
-          { num: "50K+", label: "Date Palm Trees", icon: "🌴" },
-          { num: "15+", label: "Export Countries", icon: "🌍" },
-          { num: "5,000+", label: "Tonnes Annual Yield", icon: "📦" },
+          { num: "500K+", label: "sqm Farm Area", icon: "✦" },
+          { num: "50K+", label: "Date Palm Trees", icon: "✦" },
+          { num: "15+", label: "Export Countries", icon: "✦" },
+          { num: "5,000+", label: "Tonnes Annual Yield", icon: "✦" },
         ].map(s => (
           <div key={s.label} className="card text-center !p-5">
-            <div className="text-3xl mb-2">{s.icon}</div>
+            <div className="text-xl mb-2 text-gold opacity-90">{s.icon}</div>
             <div className="font-serif text-2xl font-light mb-1" style={{ color: "#00A860" }}>{s.num}</div>
             <div className="text-xs text-white/90 uppercase tracking-wider">{s.label}</div>
           </div>
@@ -90,12 +90,12 @@ const AgricultureContent = () => (
     </div>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {[
-        { icon: "🌴", title: "Date Palm Farms", color: "#00A860", desc: "Our Al-Ahsa date palm farms span over 500,000 sqm, cultivating premium varieties including Medjool, Sukkari, and Ajwa — the most prized dates in the world.", points: ["Premium Date Varieties", "Organic Cultivation Methods", "Advanced Irrigation Systems", "Harvest & Processing Facilities", "Quality Grading & Packaging"] },
-        { icon: "🏭", title: "Cold Storage Facilities", color: "#7B9BFF", desc: "State-of-the-art temperature-controlled cold storage infrastructure ensuring the highest quality preservation from harvest to delivery across global supply chains.", points: ["10,000+ Tonne Capacity", "Temperature-Controlled Zones", "ISO-Certified Facilities", "24/7 Monitoring Systems", "Last-Mile Cold Chain"] },
-        { icon: "✈️", title: "International Date Export", color: "#C9A252", desc: "FARAZM Holdings exports premium Saudi dates to over 15 countries across Europe, North America, Asia, and the GCC — representing the finest of the Kingdom's agricultural heritage on the world stage.", points: ["15+ Export Markets", "UK & European Distribution", "USA & Canadian Markets", "Asian Market Penetration", "Custom Packaging & Branding"] },
+        { icon: "✦", title: "Date Palm Farms", color: "#00A860", desc: "Our Al-Ahsa date palm farms span over 500,000 sqm, cultivating premium varieties including Medjool, Sukkari, and Ajwa — the most prized dates in the world.", points: ["Premium Date Varieties", "Organic Cultivation Methods", "Advanced Irrigation Systems", "Harvest & Processing Facilities", "Quality Grading & Packaging"] },
+        { icon: "✦", title: "Cold Storage Facilities", color: "#7B9BFF", desc: "State-of-the-art temperature-controlled cold storage infrastructure ensuring the highest quality preservation from harvest to delivery across global supply chains.", points: ["10,000+ Tonne Capacity", "Temperature-Controlled Zones", "ISO-Certified Facilities", "24/7 Monitoring Systems", "Last-Mile Cold Chain"] },
+        { icon: "✦", title: "International Date Export", color: "#C9A252", desc: "FARAZM Holdings exports premium Saudi dates to over 15 countries across Europe, North America, Asia, and the GCC — representing the finest of the Kingdom's agricultural heritage on the world stage.", points: ["15+ Export Markets", "UK & European Distribution", "USA & Canadian Markets", "Asian Market Penetration", "Custom Packaging & Branding"] },
       ].map(s => (
         <div key={s.title} className="card">
-          <div className="text-4xl mb-4">{s.icon}</div>
+          <div className="text-4xl mb-4 text-gold opacity-90">{s.icon}</div>
           <h4 className="font-serif text-xl font-semibold mb-3" style={{ color: s.color }}>{s.title}</h4>
           <p className="text-white/90 text-xs leading-relaxed mb-4">{s.desc}</p>
           <ul className="flex flex-col gap-1.5">{s.points.map(p => <li key={p} className="flex items-center gap-2 text-xs text-white/90"><Icon name="check" size={12} color={s.color} />{p}</li>)}</ul>
@@ -116,10 +116,10 @@ const ManufacturingContent = () => (
       </div>
       <div className="grid grid-cols-2 gap-4">
         {[
-          { num: "25,000+", label: "Tonnes Annual Production", icon: "⚙️" },
-          { num: "40+", label: "Product Categories", icon: "📦" },
-          { num: "12+", label: "Export Markets", icon: "🌍" },
-          { num: "200+", label: "Industrial Clients", icon: "🏭" },
+          { num: "25,000+", label: "Tonnes Annual Production", icon: "✦" },
+          { num: "40+", label: "Product Categories", icon: "✦" },
+          { num: "12+", label: "Export Markets", icon: "✦" },
+          { num: "200+", label: "Industrial Clients", icon: "✦" },
         ].map(s => (
           <div key={s.label} className="card text-center !p-5">
             <div className="text-3xl mb-2">{s.icon}</div>
@@ -131,10 +131,10 @@ const ManufacturingContent = () => (
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {[
-        { icon: "🏭", title: "Plastic Manufacturing", color: "#7B9BFF", desc: "Advanced plastic manufacturing operations producing a wide range of industrial and consumer plastic products. Our facilities utilise modern injection moulding, extrusion, and blow moulding technologies.", points: ["Injection Moulding", "Extrusion Products", "Blow Moulding", "Custom Industrial Parts", "Consumer Product Lines", "ISO 9001 Certified"] },
-        { icon: "🧪", title: "Raw Material (Plastic Dana) Trading", color: "#C9A252", desc: "We are a leading trader of plastic raw materials (dana) including HDPE, LDPE, PP, PVC, and PET granules — sourcing from global suppliers and distributing to manufacturers across Saudi Arabia, GCC, and international markets.", points: ["HDPE & LDPE Trading", "Polypropylene (PP)", "PVC & PET Granules", "International Sourcing", "GCC Distribution Network", "Export to 12+ Countries"] },
-        { icon: "🔬", title: "Industrial R&D & Process Optimisation", color: "#00A860", desc: "Our manufacturing division continuously invests in research, process optimisation, and new product development to maintain competitive advantage and meet evolving industrial standards.", points: ["Process Optimisation", "New Product Development", "Sustainability Initiatives", "Waste Reduction Programs", "Energy Efficiency", "Environmental Compliance"] },
-        { icon: "🚢", title: "Export & International Trade", color: "#C9A252", desc: "FARAZM Holdings exports manufactured goods and raw materials to international markets, leveraging our global partner network and logistics expertise to deliver Saudi industrial products worldwide.", points: ["GCC Export Network", "European Market Access", "Asian Distribution", "Trade Finance Solutions", "Customs & Compliance", "Freight & Logistics"] },
+        { icon: "✦", title: "Plastic Manufacturing", color: "#7B9BFF", desc: "Advanced plastic manufacturing operations producing a wide range of industrial and consumer plastic products. Our facilities utilise modern injection moulding, extrusion, and blow moulding technologies.", points: ["Injection Moulding", "Extrusion Products", "Blow Moulding", "Custom Industrial Parts", "Consumer Product Lines", "ISO 9001 Certified"] },
+        { icon: "✦", title: "Raw Material (Plastic Dana) Trading", color: "#C9A252", desc: "We are a leading trader of plastic raw materials (dana) including HDPE, LDPE, PP, PVC, and PET granules — sourcing from global suppliers and distributing to manufacturers across Saudi Arabia, GCC, and international markets.", points: ["HDPE & LDPE Trading", "Polypropylene (PP)", "PVC & PET Granules", "International Sourcing", "GCC Distribution Network", "Export to 12+ Countries"] },
+        { icon: "✦", title: "Industrial R&D & Process Optimisation", color: "#00A860", desc: "Our manufacturing division continuously invests in research, process optimisation, and new product development to maintain competitive advantage and meet evolving industrial standards.", points: ["Process Optimisation", "New Product Development", "Sustainability Initiatives", "Waste Reduction Programs", "Energy Efficiency", "Environmental Compliance"] },
+        { icon: "✦", title: "Export & International Trade", color: "#C9A252", desc: "FARAZM Holdings exports manufactured goods and raw materials to international markets, leveraging our global partner network and logistics expertise to deliver Saudi industrial products worldwide.", points: ["GCC Export Network", "European Market Access", "Asian Distribution", "Trade Finance Solutions", "Customs & Compliance", "Freight & Logistics"] },
       ].map(s => (
         <div key={s.title} className="card">
           <div className="text-4xl mb-4">{s.icon}</div>
@@ -156,18 +156,17 @@ const ServicesContent = () => (
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {[
-        { icon: "🏢", title: "Real Estate Services", color: "#C9A252", desc: "Full-cycle real estate services including property development, investment advisory, asset management, and project consultancy across residential, commercial, and industrial segments.", points: ["Property Development", "Real Estate Investment", "Asset Management", "Project Consultancy"] },
-        { icon: "💻", title: "IT Services", color: "#7B9BFF", desc: "End-to-end information technology services for enterprise and government clients from infrastructure and managed services to software development and digital transformation.", points: ["Enterprise IT Infrastructure", "Software Development", "Managed IT Services", "Digital Transformation"] },
-        { icon: "🚛", title: "Transport & Logistics", color: "#00A860", desc: "Comprehensive transport and logistics solutions across the Kingdom, supporting industrial, commercial, and government clients with fleet management, freight, and supply chain services.", points: ["Fleet Management", "Freight & Cargo", "Supply Chain Solutions", "Last-Mile Delivery"] },
-        { icon: "🚗", title: "Vehicle Import & Export", color: "#C9A252", desc: "Specialist vehicle trading operation handling import and export of commercial vehicles, heavy machinery carriers, and fleet solutions for corporate and government clients.", points: ["Commercial Vehicle Import", "Fleet Procurement", "Export Operations", "Customs Clearance"] },
-        { icon: "📋", title: "Consultancy Services", color: "#7B9BFF", desc: "Strategic business and management consultancy drawing on 25+ years of Kingdom experience advising government entities, corporates, and international investors on Saudi market entry and operations.", points: ["Business Strategy", "Market Entry Advisory", "Government Relations", "Investment Planning"] },
-        { icon: "🍽️", title: "Food & Restaurant Business", color: "#00A860", desc: "FARAZM Holdings operates premium food and hospitality establishments across the Kingdom, bringing world-class dining experiences and food production capabilities to the Saudi market.", points: ["Restaurant Operations", "Food Production", "Catering Services", "Hospitality Management"] },
-        { icon: "🏗️", title: "Contracting Services", color: "#C9A252", desc: "Full-service general contracting capabilities covering civil works, MEP, fit-out, and specialist contracting across residential, commercial, and industrial projects throughout the Kingdom.", points: ["Civil Contracting", "MEP Works", "Interior Fit-Out", "Project Management"] },
-        { icon: "🦺", title: "Heavy Machinery Import & Rental", color: "#7B9BFF", desc: "Comprehensive heavy machinery solutions importing, supplying, and renting construction equipment, industrial machinery, and specialist plant for major projects across Saudi Arabia.", points: ["Equipment Import", "Machinery Rental", "Fleet Maintenance", "Operator Services"] },
+        { icon: "✦", title: "Real Estate Services", color: "#C9A252", desc: "Full-cycle real estate services including property development, investment advisory, asset management, and project consultancy across residential, commercial, and industrial segments.", points: ["Property Development", "Real Estate Investment", "Asset Management", "Project Consultancy"] },
+        { icon: "✦", title: "IT Services", color: "#7B9BFF", desc: "End-to-end information technology services for enterprise and government clients from infrastructure and managed services to software development and digital transformation.", points: ["Enterprise IT Infrastructure", "Software Development", "Managed IT Services", "Digital Transformation"] },
+        { icon: "✦", title: "Transport & Logistics", color: "#00A860", desc: "Comprehensive transport and logistics solutions across the Kingdom, supporting industrial, commercial, and government clients with fleet management, freight, and supply chain services.", points: ["Fleet Management", "Freight & Cargo", "Supply Chain Solutions", "Last-Mile Delivery"] },
+        { icon: "✦", title: "Vehicle Import & Export", color: "#C9A252", desc: "Specialist vehicle trading operation handling import and export of commercial vehicles, heavy machinery carriers, and fleet solutions for corporate and government clients.", points: ["Commercial Vehicle Import", "Fleet Procurement", "Export Operations", "Customs Clearance"] },
+        { icon: "✦", title: "Consultancy Services", color: "#7B9BFF", desc: "Strategic business and management consultancy drawing on 25+ years of Kingdom experience advising government entities, corporates, and international investors on Saudi market entry and operations.", points: ["Business Strategy", "Market Entry Advisory", "Government Relations", "Investment Planning"] },
+        { icon: "✦", title: "Food & Restaurant Business", color: "#00A860", desc: "FARAZM Holdings operates premium food and hospitality establishments across the Kingdom, bringing world-class dining experiences and food production capabilities to the Saudi market.", points: ["Restaurant Operations", "Food Production", "Catering Services", "Hospitality Management"] },
+        { icon: "✦", title: "Contracting Services", color: "#C9A252", desc: "Full-service general contracting capabilities covering civil works, MEP, fit-out, and specialist contracting across residential, commercial, and industrial projects throughout the Kingdom.", points: ["Civil Contracting", "MEP Works", "Interior Fit-Out", "Project Management"] },
+        { icon: "✦", title: "Heavy Machinery Import & Rental", color: "#7B9BFF", desc: "Comprehensive heavy machinery solutions importing, supplying, and renting construction equipment, industrial machinery, and specialist plant for major projects across Saudi Arabia.", points: ["Equipment Import", "Machinery Rental", "Fleet Maintenance", "Operator Services"] },
       ].map(s => (
         <div key={s.title} className="card">
-          <div className="text-4xl mb-3">{s.icon}</div>
-          <h4 className="font-serif text-lg font-semibold mb-2" style={{ color: s.color }}>{s.title}</h4>
+          <div className="text-xl mb-3 text-gold opacity-90">{s.icon}</div>          <h4 className="font-serif text-lg font-semibold mb-2" style={{ color: s.color }}>{s.title}</h4>
           <p className="text-white/90 text-xs leading-relaxed mb-3">{s.desc}</p>
           <ul className="flex flex-col gap-1">{s.points.map(p => <li key={p} className="flex items-center gap-2 text-xs text-white/90"><Icon name="check" size={11} color={s.color} />{p}</li>)}</ul>
         </div>
@@ -209,7 +208,7 @@ const PARTNERS = [
   { name: "Business Technique Limited", abbr: "BT", bg: "#1a1a3e", accent: "#7B9BFF", country: "🇬🇧 United Kingdom", role: "Technology Consulting & Digital Transformation", desc: "A distinguished UK-based consultancy bringing world-class technology advisory, enterprise architecture expertise, and proven delivery methodologies to FARAZM's Saudi operations.", tags: ["Digital Strategy", "Enterprise Architecture", "Consulting"] },
   { name: "Go Agile Cloud Limited", abbr: "GAC", bg: "#0f2a1e", accent: C.greenLt, country: "🇬🇧 United Kingdom", role: "Agile Cloud Engineering", desc: "Specialists in cloud-native engineering, DevOps, and agile delivery. Empowering Saudi enterprises to deploy at speed and scale with best-in-class cloud infrastructure.", tags: ["Cloud Native", "DevOps", "Agile Delivery"] },
   { name: "GoAgile Academy Limited", abbr: "GAA", bg: "#1a2a0e", accent: C.gold, country: "🇬🇧 United Kingdom", role: "Professional Training & Certifications", desc: "Internationally accredited training academy delivering Agile, Scrum, cloud, and digital skills programmes upskilling Saudi workforce in alignment with Vision 2030 human capital goals.", tags: ["Agile Certification", "Scrum Master", "Cloud Training"] },
-  { name: "Primacloud Solutions", abbr: "PC", bg: "#1a0f2a", accent: C.gold, country: "🇬🇧 United Kingdom", role: "Cloud Infrastructure & Managed Services", desc: "Premium cloud infrastructure specialists delivering robust, secure, and scalable managed cloud environments. Supporting FARAZM's delivery of enterprise-grade cloud solutions across KSA.", tags: ["Managed Cloud", "Infrastructure", "Security"] },
+  { name: "Prima Cloud Solutions Ltd", abbr: "PC", bg: "#1a0f2a", accent: C.gold, country: "🇬🇧 United Kingdom", role: "Cloud Infrastructure & Managed Services", desc: "Premium cloud infrastructure specialists delivering robust, secure, and scalable managed cloud environments. Supporting FARAZM's delivery of enterprise-grade cloud solutions across KSA.", tags: ["Managed Cloud", "Infrastructure", "Security"] },
 ];
 
 const TECH_PROJECTS = [
@@ -231,12 +230,12 @@ const REAL_ESTATE_PROJECTS = [
 ];
 
 const JOBS = [
-  { icon: "💻", title: "Senior Cloud Architect", type: "Full-Time", location: "Riyadh, KSA", exp: "8+ yrs", tags: ["AWS", "Azure", "SAR 35k/mo"] },
-  { icon: "🤖", title: "AI/ML Engineer (Arabic NLP)", type: "Full-Time", location: "Riyadh, KSA", exp: "5+ yrs", tags: ["Python", "PyTorch", "LLMs"] },
-  { icon: "🛡️", title: "Cybersecurity Consultant", type: "Contract", location: "Jeddah / Remote", exp: "7+ yrs", tags: ["CISSP", "ISO 27001", "SOC"] },
-  { icon: "📊", title: "Digital Transformation Lead", type: "Full-Time", location: "Riyadh, KSA", exp: "10+ yrs", tags: ["Agile", "Change Mgmt"] },
-  { icon: "🌾", title: "Agricultural Operations Manager", type: "Full-Time", location: "Al-Ahsa, KSA", exp: "8+ yrs", tags: ["Date Farming", "Export", "Cold Chain"] },
-  { icon: "🏗️", title: "Programme Manager – Real Estate", type: "Full-Time", location: "Riyadh, KSA", exp: "12+ yrs", tags: ["PMP", "Real Estate", "Vision 2030"] },
+  { icon: "✦", title: "Senior Cloud Architect", type: "Full-Time", location: "Riyadh, KSA", exp: "8+ yrs", tags: ["AWS", "Azure", "SAR 35k/mo"] },
+  { icon: "✦", title: "AI/ML Engineer (Arabic NLP)", type: "Full-Time", location: "Riyadh, KSA", exp: "5+ yrs", tags: ["Python", "PyTorch", "LLMs"] },
+  { icon: "✦", title: "Cybersecurity Consultant", type: "Contract", location: "Jeddah / Remote", exp: "7+ yrs", tags: ["CISSP", "ISO 27001", "SOC"] },
+  { icon: "✦", title: "Digital Transformation Lead", type: "Full-Time", location: "Riyadh, KSA", exp: "10+ yrs", tags: ["Agile", "Change Mgmt"] },
+  { icon: "✦", title: "Agricultural Operations Manager", type: "Full-Time", location: "Al-Ahsa, KSA", exp: "8+ yrs", tags: ["Date Farming", "Export", "Cold Chain"] },
+  { icon: "✦", title: "Programme Manager – Real Estate", type: "Full-Time", location: "Riyadh, KSA", exp: "12+ yrs", tags: ["PMP", "Real Estate", "Vision 2030"] },
 ];
 
 const TALENT_POOL = [
@@ -300,7 +299,7 @@ export default function FarazmHoldings() {
     };
   };
 
-  
+
 
   return (
     <>
@@ -411,14 +410,13 @@ export default function FarazmHoldings() {
           </div>
           <div className="flex flex-col gap-4">
             {[
-              { icon: "🌾", title: "Agricultural Heritage", desc: "Deep roots in Saudi Arabia's agricultural sector with premium date palm farms, cold storage facilities, and international export operations spanning three continents." },
-              { icon: "🏭", title: "Industrial Strength", desc: "Comprehensive manufacturing capabilities in plastic production and raw material trading, supporting Saudi Arabia's industrial diversification under Vision 2030." },
-              { icon: "🏗️", title: "Real Estate Excellence", desc: "A portfolio of landmark residential, commercial, and industrial real estate developments across Riyadh, Jeddah, Dammam, and emerging Vision 2030 cities." },
-              { icon: "🤝", title: "Trusted by the Best", desc: "Proven partnerships with Al Ayuni, Saudi Binladin Group, Saudi Oger, Saudi German Hospital, and MASCO — the Kingdom's most respected organisations." },
+              { icon: "✦", title: "Agricultural Heritage", desc: "Deep roots in Saudi Arabia's agricultural sector with premium date palm farms, cold storage facilities, and international export operations spanning three continents." },
+              { icon: "✦", title: "Industrial Strength", desc: "Comprehensive manufacturing capabilities in plastic production and raw material trading, supporting Saudi Arabia's industrial diversification under Vision 2030." },
+              { icon: "✦", title: "Real Estate Excellence", desc: "A portfolio of landmark residential, commercial, and industrial real estate developments across Riyadh, Jeddah, Dammam, and emerging Vision 2030 cities." },
+              { icon: "✦", title: "Trusted by the Best", desc: "Proven partnerships with Al Ayuni, Saudi Binladin Group, Saudi Oger, Saudi German Hospital, and MASCO — the Kingdom's most respected organisations." },
             ].map(item => (
               <div key={item.title} className="card flex gap-4 items-start !p-5">
-                <div className="text-2xl flex-shrink-0">{item.icon}</div>
-                <div>
+                <div className="text-2xl flex-shrink-0 text-gold opacity-90">{item.icon}</div>                <div>
                   <div className="font-semibold text-sm mb-1">{item.title}</div>
                   <div className="text-white/90 text-xs leading-relaxed">{item.desc}</div>
                 </div>
@@ -429,10 +427,10 @@ export default function FarazmHoldings() {
       </section>
 
       {/* ── SECTORS ── */}
-       {/* ── SECTORS ── */}
+      {/* ── SECTORS ── */}
       <section id="sectors" className="py-24 px-[5%] overflow-hidden" style={{ position: "relative" }}>
         <div style={{ position: "absolute", inset: 0, background: `radial-gradient(ellipse 70% 50% at 50% 50%, rgba(201,162,82,0.04) 0%, transparent 70%)`, zIndex: 0, pointerEvents: "none" }} />
-        
+
         <div style={{ position: "relative", zIndex: 5 }}>
           <SectionHeader overline="Our Business Sectors" title="Five Pillars of" highlight="Purposeful Investment" desc="FARAZM Holdings operates across five strategically chosen sectors, each contributing to Saudi Arabia's economic diversification and Vision 2030 objectives." />
 
@@ -469,8 +467,7 @@ export default function FarazmHoldings() {
           {REAL_ESTATE_PROJECTS.map((p) => (
             <div key={p.no} className="project-card">
               <div className="project-header">
-                <div className="project-number">{p.no}</div>
-                <div className="w-full">
+               <div className="w-full">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs tracking-[0.15em] uppercase text-gold">{p.type}</div>
                     <span style={{
@@ -514,8 +511,7 @@ export default function FarazmHoldings() {
           {TECH_PROJECTS.map((p) => (
             <div key={p.no} className="project-card">
               <div className="project-header">
-                <div className="project-number">{p.no}</div>
-                <div>
+<div className="project-number" style={{ color: "rgba(245,240,232,0.9)" }}>{p.no}</div>                <div>
                   <div className="text-xs tracking-[0.15em] uppercase text-gold mb-1">{p.sector}</div>
                   <h3 className="font-serif text-xl font-semibold">{p.title}</h3>
                 </div>
@@ -558,7 +554,7 @@ export default function FarazmHoldings() {
                 >
                   {c.logo
                     ? <img src={c.logo} alt={c.name} style={{ width: "100%", height: "100%", objectFit: "contain", padding: "8px" }}
-                        onError={(e) => { e.target.style.display = "none"; e.target.parentNode.innerHTML = c.abbr; }} />
+                      onError={(e) => { e.target.style.display = "none"; e.target.parentNode.innerHTML = c.abbr; }} />
                     : c.abbr
                   }
                 </div>
@@ -649,8 +645,7 @@ export default function FarazmHoldings() {
             {JOBS.map(j => (
               <div key={j.title} className="flex items-start gap-4 p-5 bg-panel border border-border rounded transition-all hover:border-gold-dark hover:shadow-xl">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-gold/10 border border-gold/20">
-                  <span className="text-xl">{j.icon}</span>
-                </div>
+                  <span className="text-xl text-gold opacity-90">{j.icon}</span>                </div>
                 <div className="flex-1">
                   <h4 className="font-semibold text-sm mb-2">{j.title}</h4>
                   <div className="flex flex-wrap gap-1.5 mb-2">
@@ -720,19 +715,19 @@ export default function FarazmHoldings() {
         {activeTab === "onboarding" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { step: "01", icon: "📄", title: "CV Submission & Profile Review", desc: "Our senior consultants personally review every application for suitability and alignment with live mandates across all sectors.", timeline: "Day 1–3" },
-              { step: "02", icon: "📞", title: "Boutique Consultation Call", desc: "A dedicated FARAZM consultant conducts a deep-dive conversation about your aspirations and preferred opportunity types.", timeline: "Day 3–7" },
-              { step: "03", icon: "🎯", title: "Opportunity Matching", desc: "We match you with the most suitable opportunities across our Saudi client portfolio across all 5 sectors.", timeline: "Week 2" },
-              { step: "04", icon: "🛂", title: "KSA Visa & Relocation Support", desc: "Our mobility team guides you through Saudi work permit applications, Iqama processing, and housing assistance.", timeline: "Weeks 3–6" },
-              { step: "05", icon: "🎓", title: "Cultural Briefing", desc: "Comprehensive briefing covering workplace norms, Islamic calendar, dress codes, and life in Saudi Arabia.", timeline: "Week 6–8" },
-              { step: "06", icon: "🚀", title: "In-Kingdom Onboarding", desc: "Dedicated in-Kingdom support throughout your first 90 days including HR liaison and pastoral care from our Riyadh team.", timeline: "Ongoing" },
+              { step: "01", icon: "✦", title: "CV Submission & Profile Review", desc: "Our senior consultants personally review every application for suitability and alignment with live mandates across all sectors.", timeline: "Day 1–3" },
+              { step: "02", icon: "✦", title: "Boutique Consultation Call", desc: "A dedicated FARAZM consultant conducts a deep-dive conversation about your aspirations and preferred opportunity types.", timeline: "Day 3–7" },
+              { step: "03", icon: "✦", title: "Opportunity Matching", desc: "We match you with the most suitable opportunities across our Saudi client portfolio across all 5 sectors.", timeline: "Week 2" },
+              { step: "04", icon: "✦", title: "KSA Visa & Relocation Support", desc: "Our mobility team guides you through Saudi work permit applications, Iqama processing, and housing assistance.", timeline: "Weeks 3–6" },
+              { step: "05", icon: "✦", title: "Cultural Briefing", desc: "Comprehensive briefing covering workplace norms, Islamic calendar, dress codes, and life in Saudi Arabia.", timeline: "Week 6–8" },
+              { step: "06", icon: "✦", title: "In-Kingdom Onboarding", desc: "Dedicated in-Kingdom support throughout your first 90 days including HR liaison and pastoral care from our Riyadh team.", timeline: "Ongoing" },
             ].map(s => (
               <div key={s.step} className="card">
                 <div className="flex justify-between items-start mb-4">
-                  <div className="font-serif text-5xl font-light opacity-10 text-gold leading-none">{s.step}</div>
+                  <div className="font-serif text-5xl font-light opacity-90 text-gold leading-none">{s.step}</div>
                   <span style={{ fontSize: "0.7rem", letterSpacing: "0.05em", textTransform: "uppercase", color: C.greenLt, background: "rgba(0,105,62,0.1)", border: "1px solid rgba(0,168,96,0.25)", borderRadius: "9999px", padding: "4px 12px" }}>{s.timeline}</span>
                 </div>
-                <div className="text-3xl mb-3">{s.icon}</div>
+                <div className="text-3xl mb-3 text-gold opacity-90">{s.icon}</div>
                 <h4 className="font-semibold text-sm mb-2">{s.title}</h4>
                 <p className="text-white/90 text-xs leading-relaxed">{s.desc}</p>
               </div>
@@ -743,13 +738,13 @@ export default function FarazmHoldings() {
         {activeTab === "employers" && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { icon: "🔍", title: "Boutique Executive Search", desc: "For C-suite and Director-level appointments across all 5 FARAZM sectors — curated shortlists from our global network within 10 business days.", color: C.gold },
-              { icon: "⚡", title: "Rapid Talent Deployment", desc: "Pre-screened specialists from our 800+ talent pool across Agriculture, Manufacturing, Real Estate, IT, and Services. Most roles filled within 4–6 weeks.", color: "#7B9BFF" },
-              { icon: "🏭", title: "Workforce Outsourcing (BPO)", desc: "Full workforce solutions for large-scale programme delivery across all sectors — end-to-end employment, compliance, payroll, and HR administration.", color: C.greenLt },
-              { icon: "📋", title: "Nitaqat & Saudisation Advisory", desc: "Expert guidance on Saudisation ratios, Nitaqat compliance strategy, and Saudi talent development programmes to achieve premium Nitaqat classification.", color: C.gold },
+              { icon: "✦", title: "Boutique Executive Search", desc: "For C-suite and Director-level appointments across all 5 FARAZM sectors — curated shortlists from our global network within 10 business days.", color: C.gold },
+              { icon: "✦", title: "Rapid Talent Deployment", desc: "Pre-screened specialists from our 800+ talent pool across Agriculture, Manufacturing, Real Estate, IT, and Services. Most roles filled within 4–6 weeks.", color: "#7B9BFF" },
+              { icon: "✦", title: "Workforce Outsourcing (BPO)", desc: "Full workforce solutions for large-scale programme delivery across all sectors — end-to-end employment, compliance, payroll, and HR administration.", color: C.greenLt },
+              { icon: "✦", title: "Nitaqat & Saudisation Advisory", desc: "Expert guidance on Saudisation ratios, Nitaqat compliance strategy, and Saudi talent development programmes to achieve premium Nitaqat classification.", color: C.gold },
             ].map(s => (
               <div key={s.title} className="card">
-                <div className="text-4xl mb-4">{s.icon}</div>
+                <div className="text-xl mb-4 text-gold opacity-90">{s.icon}</div>
                 <h4 className="font-serif text-xl font-semibold mb-2" style={{ color: s.color }}>{s.title}</h4>
                 <p className="text-white/90 text-sm leading-relaxed">{s.desc}</p>
               </div>
@@ -862,7 +857,7 @@ export default function FarazmHoldings() {
 
           <div>
             <div className="text-xs tracking-[0.2em] uppercase text-gold mb-4 font-semibold">Our Sectors</div>
-            {[["🌾 Agriculture & Dates", "sectors"], ["🏭 Manufacturing", "sectors"], ["🏗️ Real Estate", "realestate"], ["💻 Technology & IT", "sectors"], ["⚙️ Services", "sectors"]].map(([l, id]) => (
+            {[["✦ Agriculture & Dates", "sectors"], ["✦ Manufacturing", "sectors"], ["✦ Real Estate", "realestate"], ["✦ Technology & IT", "sectors"], ["✦ Services", "sectors"]].map(([l, id]) => (
               <a key={l} className="block text-white/90 text-sm mb-2 cursor-pointer hover:text-gold transition-colors" onClick={() => scrollTo(id)}>{l}</a>
             ))}
           </div>
