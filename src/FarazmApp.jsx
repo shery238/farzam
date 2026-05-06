@@ -3,6 +3,8 @@ import logo1 from './assets/logo1.png'
 import logo2 from './assets/logo2.png'
 import logo3svg from './assets/logo3.svg'
 import farazmLogo from './assets/image.png'
+import partnerLogo1 from './assets/partnerlogo1.png'  // lowercase 'l'
+
 
 const C = {
   obsidian: "#07070C", onyx: "#0F0F1A", charcoal: "#161625",
@@ -203,12 +205,11 @@ const TechnologyContent = () => (
     </div>
   </div>
 );
-
 const PARTNERS = [
-  { name: "Business Technique Limited", abbr: "BT", bg: "#1a1a3e", accent: "#7B9BFF", country: "🇬🇧 United Kingdom", role: "Technology Consulting & Digital Transformation", desc: "A distinguished UK-based consultancy bringing world-class technology advisory, enterprise architecture expertise, and proven delivery methodologies to FARAZM's Saudi operations.", tags: ["Digital Strategy", "Enterprise Architecture", "Consulting"] },
-  { name: "Go Agile Cloud Limited", abbr: "GAC", bg: "#0f2a1e", accent: C.greenLt, country: "🇬🇧 United Kingdom", role: "Agile Cloud Engineering", desc: "Specialists in cloud-native engineering, DevOps, and agile delivery. Empowering Saudi enterprises to deploy at speed and scale with best-in-class cloud infrastructure.", tags: ["Cloud Native", "DevOps", "Agile Delivery"] },
-  { name: "GoAgile Academy Limited", abbr: "GAA", bg: "#1a2a0e", accent: C.gold, country: "🇬🇧 United Kingdom", role: "Professional Training & Certifications", desc: "Internationally accredited training academy delivering Agile, Scrum, cloud, and digital skills programmes upskilling Saudi workforce in alignment with Vision 2030 human capital goals.", tags: ["Agile Certification", "Scrum Master", "Cloud Training"] },
-  { name: "Prima Cloud Solutions Ltd", abbr: "PC", bg: "#1a0f2a", accent: C.gold, country: "🇬🇧 United Kingdom", role: "Cloud Infrastructure & Managed Services", desc: "Premium cloud infrastructure specialists delivering robust, secure, and scalable managed cloud environments. Supporting FARAZM's delivery of enterprise-grade cloud solutions across KSA.", tags: ["Managed Cloud", "Infrastructure", "Security"] },
+  { name: "Business Technique Limited", abbr: "BT", logo: null, bg: "#1a1a3e", accent: "#7B9BFF", country: "🇬🇧 United Kingdom", role: "Technology Consulting & Digital Transformation", desc: "A distinguished UK-based consultancy bringing world-class technology advisory, enterprise architecture expertise, and proven delivery methodologies to FARAZM's Saudi operations.", tags: ["Digital Strategy", "Enterprise Architecture", "Consulting"] },
+  { name: "Go Agile Cloud Limited", abbr: "GAC", logo: "https://goagilecloud.com/wp-content/uploads/2022/12/gac-logo.png", bg: "#0f2a1e", accent: C.greenLt, country: "🇬🇧 United Kingdom", role: "Agile Cloud Engineering", desc: "Specialists in cloud-native engineering, DevOps, and agile delivery. Empowering Saudi enterprises to deploy at speed and scale with best-in-class cloud infrastructure.", tags: ["Cloud Native", "DevOps", "Agile Delivery"] },
+  { name: "GoAgile Academy Limited", abbr: "GAA", logo: "https://goagilecloud.com/wp-content/uploads/2022/12/gac-logo.png", bg: "#1a2a0e", accent: C.gold, country: "🇬🇧 United Kingdom", role: "Professional Training & Certifications", desc: "Internationally accredited training academy delivering Agile, Scrum, cloud, and digital skills programmes upskilling Saudi workforce in alignment with Vision 2030 human capital goals.", tags: ["Agile Certification", "Scrum Master", "Cloud Training"] },
+  { name: "Prima Cloud Solutions Ltd", abbr: "PC", logo: partnerLogo1, bg: "#1a0f2a", accent: C.gold, country: "🇬🇧 United Kingdom", role: "Cloud Infrastructure & Managed Services", desc: "Premium cloud infrastructure specialists delivering robust, secure, and scalable managed cloud environments. Supporting FARAZM's delivery of enterprise-grade cloud solutions across KSA.", tags: ["Managed Cloud", "Infrastructure", "Security"] },
 ];
 
 const TECH_PROJECTS = [
@@ -594,9 +595,14 @@ export default function FarazmHoldings() {
           {PARTNERS.map((p) => (
             <div key={p.name} className="partner-card">
               <div className="flex items-start gap-5 mb-5">
-                <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: p.bg, border: `2px solid ${p.accent}30` }}>
-                  <span className="font-serif font-bold text-lg" style={{ color: p.accent }}>{p.abbr}</span>
-                </div>
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
+  style={{ background: p.logo ? "#ffffff" : p.bg, border: `2px solid ${p.accent}30` }}>
+  {p.logo
+    ? <img src={p.logo} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", padding: "6px" }}
+        onError={(e) => { e.target.style.display = "none"; e.target.parentNode.innerHTML = `<span style="color:${p.accent};font-weight:bold">${p.abbr}</span>`; }} />
+    : <span className="font-serif font-bold text-lg" style={{ color: p.accent }}>{p.abbr}</span>
+  }
+</div>
                 <div>
                   <h3 className="font-serif text-xl font-semibold mb-1">{p.name}</h3>
                   <div className="text-xs mb-1" style={{ color: p.accent }}>{p.role}</div>
